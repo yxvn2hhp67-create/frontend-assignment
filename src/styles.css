@@ -186,3 +186,172 @@ button:disabled {
   opacity: 0.6;
   cursor: default;
 }
+
+.transactionpopup-div {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.transactionpopup-box {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  max-width: 56rem;
+  max-height: 90vh;
+  overflow: auto;
+}
+
+.transactionpopup-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.transactionpopup-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.transactionlist-div {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.transactionlist-section {
+  flex: 1;
+  min-width: 0;
+  padding: 1.5rem;
+  background: var(--bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.transactionlist-section h3 {
+  margin: 0 0 1rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.createtransaction-section {
+  flex-shrink: 0;
+  width: 20rem;
+  padding: 1.5rem;
+  background: var(--bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.createtransaction-section h3 {
+  margin: 0 0 1rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.transactionlist-window {
+  margin-top: 0;
+  min-height: 10rem;
+}
+
+.transactionlist-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+
+.transactionlist-table thead tr {
+  background: var(--surface);
+  border-bottom: 2px solid var(--border);
+}
+
+.transactionlist-table th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.transactionlist-table tbody tr {
+  border-bottom: 1px solid var(--border);
+}
+
+.transactionlist-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.transactionlist-table .transactionlist-item:hover {
+  background: var(--surface);
+}
+
+.transactionlist-table td {
+  padding: 0.75rem 1rem;
+  color: var(--text);
+}
+
+.transactionlist-amount {
+  font-variant-numeric: tabular-nums;
+}
+
+.transactionlist-empty {
+  margin: 0;
+  padding: 2rem 0;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.createtransaction-submit {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.createtransaction-submit input[type="text"],
+.createtransaction-submit input[type="date"] {
+  font-size: 1rem;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  transition: border-color 0.15s ease;
+}
+
+.createtransaction-submit input[type="text"]:focus,
+.createtransaction-submit input[type="date"]:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
+}
+
+.createtransaction-submit input::placeholder {
+  color: var(--text-muted);
+}
+
+.createtransaction-submit select {
+  font-size: 1rem;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.createtransaction-submit select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
