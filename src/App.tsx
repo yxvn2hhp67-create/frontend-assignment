@@ -219,7 +219,7 @@ function App() {
                 <thead>
                   <tr>
                     <th>Account Name</th>
-                    <th>Initial Balance</th>
+                    <th>Balance</th>
                     <th></th>
                   </tr>
                 </thead>
