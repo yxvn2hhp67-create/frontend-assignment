@@ -1,32 +1,34 @@
-Mambu UI – Frontend Skeleton (React + Vite + TypeScript)
+# Frontend – React + Vite + TypeScript
 
-This sub-project is a minimal React + Vite + TypeScript setup intended as the starting point for a candidate’s frontend take-home task.
+A minimal React + Vite + TypeScript app that talks to the backend API for accounts and transactions.
 
-Prerequisites
-- Node.js 18+ (LTS recommended)
-- A package manager (npm comes with Node; yarn or pnpm also work)
+## Prerequisites
 
-Getting Started
-1. Install dependencies: npm install
-2. Run the dev server: npm run dev
-3. Open the printed local URL (typically http://localhost:5173)
+- Node.js 18+
+- Backend API running (default: `http://localhost:8080`)
 
-Build & Preview
-1. Production build: npm run build
-2. Preview the built app: npm run preview
+## Getting started
 
-Project Structure
-- index.html – Vite entry HTML
-- src/main.tsx – Application entry
-- src/App.tsx – Example component
-- src/styles.css – Minimal styling
-- vite.config.ts – Vite configuration
-- tsconfig.json – TypeScript configuration
+```bash
+npm install
+npm run dev
+```
 
-Notes for Candidates
-- You may install additional libraries as needed (state management, UI kits, testing, etc.).
-- Keep your code clean and readable. Prefer small, focused components.
-- If assumptions are necessary, document them briefly in this README.
+Open the printed URL (e.g. http://localhost:5173).
 
-Notes for Interviewers
-This skeleton is intentionally minimal. Adjust dependencies or add starter files if your exercise requires them (e.g., routing, API client, testing setup).
+## Assumptions
+
+- **A User already exists in the database.** The app uses a hardcoded user ID (e.g. `1`) when loading accounts and creating accounts. Ensure at least one user exists in the backend DB before using the app. backend service should handle this with Seeding logic.
+
+## What it does
+
+- **Accounts:** List accounts for the current user, create new accounts (name + balance).
+- **Transactions:** Per account, open a popup to list transactions and create new ones (amount, date, description, type: expense/income). Closing the popup refreshes the account list so balances stay in sync.
+
+## Project structure
+
+- `src/App.tsx` – main UI (account list, create account, transaction popup)
+- `src/api/account/` – account types and API client
+- `src/api/transaction/` – transaction types and API client
+- `src/api/user/` – user types
+- `src/styles.css` – styles
